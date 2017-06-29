@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 
-namespace template
+namespace <%=namespace %>
 {
     internal class UrlRequestCultureProvider : IRequestCultureProvider
     {

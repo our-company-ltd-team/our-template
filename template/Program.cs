@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
-namespace template
+namespace <%=namespace %>
 {
     public class Program
     {

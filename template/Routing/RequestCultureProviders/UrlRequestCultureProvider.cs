@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
 
-namespace template.Routing.RequestCultureProviders
+namespace <%=namespace %>.Routing.RequestCultureProviders
 {
     public class UrlRequestCultureProvider : IRequestCultureProvider
     {

@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ourCompany.cms;
 
-namespace template
+namespace <%=namespace %>
 {
     public class Startup
     {

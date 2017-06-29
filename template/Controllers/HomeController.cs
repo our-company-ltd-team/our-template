@@ -5,7 +5,7 @@ using Microsoft.Extensions.Localization;
 using ourCompany.cms.Data;
 using ourCompany.cms.Data.Providers;
 
-namespace template.Controllers
+namespace <%=namespace %>.Controllers
 {
     public class HomeController : BaseController
     {

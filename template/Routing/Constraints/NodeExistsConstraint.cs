@@ -5,7 +5,7 @@ using ourCompany.cms.Data.Providers;
 using ourCompany.cms.Data;
 using MongoDB.Driver;
 
-namespace template.Routing.Constraints
+namespace <%=namespace %>.Routing.Constraints
 {
     // todo : move to the right place
     public class NodeExistsConstraint<T> : IRouteConstraint

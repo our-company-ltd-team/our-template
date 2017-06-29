@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace template.Tools
+namespace <%=namespace %>.Tools
 {
     public class PartialModel<T> : IEnumerable<string> where T : class
     {

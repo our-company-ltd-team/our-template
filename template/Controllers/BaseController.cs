@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ourCompany.cms.Data;
 using ourCompany.cms.Data.Providers;
 using System.Threading.Tasks;
-using template.Models;
+using <%=namespace %>.Models;
 
 namespace <%=namespace %>.Controllers
 {
