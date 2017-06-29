@@ -1,0 +1,16 @@
+{
+ 
+  "classPrefix": "",
+  "options": [
+    "domPrefixes",
+    "html5shiv",
+    "prefixedCSS",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "forms/placeholder",
+    "touchevents",
+    "css/transforms3d",
+    "css/transforms"
+  ]
+}

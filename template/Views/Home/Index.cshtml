@@ -1,0 +1,5 @@
+﻿@model DBFluent<Home>
+@{
+    var home = Model.Get();
+}
+@await Html.PartialAsync("~/Views/Blocks/_Hero", new PartialFluentModel<IHeroBlock>(Model, home))

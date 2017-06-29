@@ -1,0 +1,10 @@
+﻿@model PartialFluentModel<IHeroBlock>
+@{
+    var block = Model.Element;
+    var fluent = Model.Fluent;
+
+    var modifiers = Model.Where(m => m.StartsWith("hero"));
+}
+<div class="main__hero hero @(string.Join(" ", modifiers))">
+    @block.Title;
+</div>
