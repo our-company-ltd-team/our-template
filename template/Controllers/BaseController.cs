@@ -6,7 +6,7 @@ using ourCompany.cms.Data.Providers;
 using System.Threading.Tasks;
 using template.Models;
 
-namespace template.Controllers
+namespace <%=namespace %>.Controllers
 {
     /// <summary>
     ///  A base class for an MVC controller with view support and DB support using D.I.
