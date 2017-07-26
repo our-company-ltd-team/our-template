@@ -36,6 +36,8 @@ if (!("startsWith" in String.prototype))
 
 declare var objectFitImages: any;
 
+(<any>window).lazyLoadOptions = {};
+
 requirejs(Polyfills, () => {
     if (!Modernizr.objectfit) {
         requirejs(["Polyfills/object-fit-images", "Polyfills/object-fit-videos"], () => {
