@@ -2,9 +2,9 @@
 using ourCompany.cms.Attributes;
 using ourCompany.cms.Model;
 using ourCompany.cms.Widgets;
-using <%=namespace %>.Blocks;
+using OURNAMESPACE.Blocks;
 
-namespace <%=namespace %>.Models
+namespace OURNAMESPACE.Models
 {
     
     public class Home : IHeroBlock

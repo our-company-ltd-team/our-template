@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "<%=namespace %>", "<%=namespace %>\<%=namespace %>.csproj", "{8B3EE175-15C1-493F-9A1F-52116D709892}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "template", "template\template.csproj", "{8B3EE175-15C1-493F-9A1F-52116D709892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

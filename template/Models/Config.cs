@@ -2,7 +2,7 @@
 using ourCompany.cms.Model;
 using ourCompany.cms.Widgets;
 
-namespace <%=namespace %>.Models
+namespace OURNAMESPACE.Models
 {
     
     public class Config

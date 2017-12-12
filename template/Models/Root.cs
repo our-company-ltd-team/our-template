@@ -1,6 +1,6 @@
 ﻿using ourCompany.cms.Attributes;
 
-namespace <%=namespace %>.Models
+namespace OURNAMESPACE.Models
 {
     [ParentOf(typeof(Config), typeof(Home))]
     [Root]

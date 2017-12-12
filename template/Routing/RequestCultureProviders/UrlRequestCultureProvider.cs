@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Http;
+using System;
+using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
-namespace <%=namespace %>.Routing.RequestCultureProviders
+namespace OURNAMESPACE.Routing.RequestCultureProviders
 {
     public class UrlRequestCultureProvider : IRequestCultureProvider
     {
@@ -30,5 +30,4 @@ namespace <%=namespace %>.Routing.RequestCultureProviders
             return Task.FromResult(new ProviderCultureResult(culture));
         }
     }
-
 }

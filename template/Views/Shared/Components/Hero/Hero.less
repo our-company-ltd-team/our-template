@@ -1,0 +1,94 @@
+/* Component main */
+@import "../../../../Styles/@helpers";
+@import "../../../../Styles/@variables";
+
+.main-base() {
+    html, body {
+        width: 100%;
+        height: 100%;
+        color: @color-font;
+        position: relative;
+        font-family: "grotesque-regular";
+        line-height: 1.2;
+        /*-webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;*/
+    }
+
+    h1, h2, h3, h4, h5, h6, p, li, ul, ol {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    strong, b {
+        .bold();
+    }
+}
+
+.main-mobile() {
+    html, body {
+        font-size: @fontsize-mobile;
+    }
+
+    .smallcaps-titles {
+        margin-bottom: @gutter-mobile/2;
+    }
+}
+
+.main-after-mobile() {
+}
+
+.main-tablet() {
+    html, body {
+        font-size: @fontsize-tablet;
+    }
+
+    .smallcaps-titles {
+        margin-bottom: @gutter-tablet/2;
+    }
+}
+
+.main-tabletPortrait() {
+}
+
+.main-tabletLandscape() {
+}
+
+.main-after-tablet() {
+}
+
+.main-laptop() {
+    html, body {
+        font-size: @fontsize-laptop;
+    }
+
+    .smallcaps-titles {
+        margin-bottom: @gutter-laptop/2;
+    }
+}
+
+.main-desktop() {
+    html, body {
+        font-size: @fontsize-desktop;
+    }
+
+    .container {
+        position: relative;
+        /*max-width: @website-max-width;*/
+        margin: 0 auto;
+    }
+
+    .smallcaps-titles {
+        margin-bottom: @gutter-desktop/2;
+    }
+}
+
+.main-between-laptop-desktop() {
+}

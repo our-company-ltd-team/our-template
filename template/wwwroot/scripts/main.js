@@ -22,6 +22,7 @@ if (!(window.requestAnimationFrame && window.cancelAnimationFrame))
     Polyfills.push("Polyfills/requestAnimationFrame");
 if (!("startsWith" in String.prototype))
     Polyfills.push("Polyfills/String.startsWith");
+window.lazyLoadOptions = {};
 requirejs(Polyfills, function () {
     if (!Modernizr.objectfit) {
         requirejs(["Polyfills/object-fit-images", "Polyfills/object-fit-videos"], function () {

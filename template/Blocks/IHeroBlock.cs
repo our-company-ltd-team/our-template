@@ -1,4 +1,4 @@
-﻿namespace <%=namespace %>.Blocks
+﻿namespace OURNAMESPACE.Blocks
 {
     public interface IHeroBlock
     {

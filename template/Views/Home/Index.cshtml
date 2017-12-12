@@ -1,5 +1,6 @@
-﻿@model DBFluent<Home>
-@{
-    var home = Model.Get();
-}
-@await Html.PartialAsync("~/Views/Blocks/_Hero", new PartialFluentModel<IHeroBlock>(Model, home))
+﻿@addTagHelper *, template
+	@model OURNAMESPACE.Controllers.HomeController.HomeViewModel
+	@foreach (var viewModel in Model.Components)
+	{
+		@await Component.InvokeAsync(viewModel.ComponentName, viewModel);
+	}

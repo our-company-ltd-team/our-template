@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ourCompany.cms.Data;
 using ourCompany.cms.Data.Providers;
+using OURNAMESPACE.Models;
 using System.Threading.Tasks;
-using <%=namespace %>.Models;
 
-namespace <%=namespace %>.Controllers
+namespace OURNAMESPACE.Controllers
 {
     /// <summary>
-    ///  A base class for an MVC controller with view support and DB support using D.I.
+    /// A base class for an MVC controller with view support and DB support using D.I. 
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Mvc.Controller" />
     public abstract class BaseController : Controller
@@ -18,8 +18,6 @@ namespace <%=namespace %>.Controllers
         protected readonly IHtmlHelper HtmlHelper;
         //protected readonly IStringLocalizer<SharedResource> SharedLocalizer;
 
-        protected DB DB => DBProvider.Default;
-
         public BaseController(IHtmlHelper htmlHelper, IDBProvider dbProvider) //, IStringLocalizer<SharedResource> sharedLocalizer)
         {
             DBProvider = dbProvider;
@@ -27,13 +25,16 @@ namespace <%=namespace %>.Controllers
             //SharedLocalizer = sharedLocalizer;
         }
 
+        protected DB DB => DBProvider.Default;
+
         public override Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             ViewBag.DB = DBProvider.Default;
 
             var config = DB.Root.Child<Config>().Get();
 
-            // we keep the BrowserTitle and GoogleDescription in the Viewbag in order to be able to override them in the controllers
+            // we keep the BrowserTitle and GoogleDescription in the Viewbag in order to be able to
+            // override them in the controllers
             ViewBag.BrowserTitle = config?.BrowserTitle ?? "";
             ViewBag.GoogleDescription = config?.GoogleDescription ?? "";
 

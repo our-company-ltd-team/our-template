@@ -5,8 +5,7 @@
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": false,
-    "sourceMap": false
-    
+    "sourceMap": false,
+    "experimentalDecorators": true
   }
-
 }

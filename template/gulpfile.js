@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var glob = require("glob");
+var find = require('find');
 
 var gulp = require('gulp');
 var clean = require('gulp-clean');
@@ -15,17 +16,12 @@ var minifyCSS = require('gulp-minify-css');
 var handlebars = require('gulp-handlebars');
 var defineModule = require('gulp-define-module');
 
-
 var cache = require('gulp-cache');
 var changed = require('gulp-changed');
 
 var components = require('responsive-components');
 
 var modernizr = require('modernizr');
-
-
-
-
 
 var bundleConfigSrc = './Styles/bundles.config.json';
 var componentsConfigSrc = './Styles/components.config.json';
@@ -35,12 +31,11 @@ var StylesOutput = './wwwroot/styles';
 var ScriptsOutput = './wwwroot/scripts';
 
 var node_modules = {
-    "node_modules/classlist-polyfill/src/index.js":  './Scripts/Polyfills/classlist.js',
-    "node_modules/enquire.js/dist/enquire.js":  './Scripts/Lib/enquire.js',
+    "node_modules/classlist-polyfill/src/index.js": './Scripts/Polyfills/classlist.js',
+    "node_modules/enquire.js/dist/enquire.js": './Scripts/Lib/enquire.js',
     "node_modules/hammerjs/hammer.js": './Scripts/Lib/hammer.js',
     "node_modules/object-fit-images/dist/ofi.min.js": './Scripts/Polyfills/object-fit-images.js'
 }
-
 
 gulp.task('build-modernizr', function (done) {
     var content = fs.readFileSync(modernizrConfigSrc, "utf-8");
@@ -49,9 +44,7 @@ gulp.task('build-modernizr', function (done) {
     modernizr.build(modernizrConfig, function (code) {
         fs.writeFile('./Scripts/Lib/modernizr.js', code, done);
     });
-
 });
- 
 
 gulp.task('copy-node_modules', function () {
     try {
@@ -68,8 +61,6 @@ gulp.task('copy-node_modules', function () {
     }
     return 0;
 });
-
-
 
 gulp.task('themes', function () {
     // generate css files from less :
@@ -90,18 +81,15 @@ gulp.task('themes', function () {
                 }))
                 .on('end', lessBundles);
         });
-
     })
-
 });
-
 
 gulp.task('templates', function () {
     gulp.src('Templates/*.tpl')
-      .pipe(changed('./wwwroot/Templates/'))
-      .pipe(handlebars())
-      .pipe(defineModule('amd'))
-      .pipe(gulp.dest('./wwwroot/Templates/'));
+        .pipe(changed('./wwwroot/Templates/'))
+        .pipe(handlebars())
+        .pipe(defineModule('amd'))
+        .pipe(gulp.dest('./wwwroot/Templates/'));
 });
 
 gulp.task('less', function () {
@@ -132,7 +120,7 @@ function lessBundles() {
             .pipe(changed(StylesOutput, { hasChanged: changed.compareContents }))
             .pipe(gulp.dest(StylesOutput))
             .pipe(minifyCSS())
-            .pipe(gulp.dest(StylesOutput+"/Build"));
+            .pipe(gulp.dest(StylesOutput + "/Build"));
     }
 }
 
@@ -143,7 +131,6 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(gulp.dest(ScriptsOutput + "/Build"));
 });
-
 
 gulp.task('components', function () {
     fs.readFile(componentsConfigSrc, "utf-8", function (err, data) {
