@@ -1,0 +1,10 @@
+﻿@model <%=namespace %>.Views.Blocks.Hero.HeroViewModel
+@{
+
+	var modifiers = Model.Modifiers ?? Enumerable.Empty<string>();
+}
+<div class="@Model.ComponentName @(string.Join(" ", modifiers))">
+	@Model.Title<br />
+	Slider Component : <br />
+	@await Component.InvokeAsync(Model.Slider.ComponentName, Model.Slider.WithModifiers("slider--hero"))
+</div>

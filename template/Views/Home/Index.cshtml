@@ -1,6 +1,0 @@
-﻿@addTagHelper *, template
-	@model OURNAMESPACE.Controllers.HomeController.HomeViewModel
-	@foreach (var viewModel in Model.Components)
-	{
-		@await Component.InvokeAsync(viewModel.ComponentName, viewModel);
-	}

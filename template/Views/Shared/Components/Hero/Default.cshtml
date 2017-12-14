@@ -1,8 +1,0 @@
-﻿@model OURNAMESPACE.Views.Blocks.Hero.HeroViewComponentModel
-@{
-
-	var modifiers = Model.Modifiers?.Where(m => m.StartsWith("hero")) ?? Enumerable.Empty<string>();
-}
-<div class="main__hero hero @(string.Join(" ", modifiers))">
-	@Model.Title
-</div>
