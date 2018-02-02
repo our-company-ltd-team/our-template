@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    
+    "lib": [ 
+      "es2015",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "preserveConstEnums": false,
+    "removeComments": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "preserve",
+    "skipLibCheck": true
+  },
+  "include": [
+    "./Components/**/*.tsx"
+  ]
+}

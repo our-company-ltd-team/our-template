@@ -1,0 +1,7 @@
+@model ourservers.io.Views.Shared.Components.Menu.MenuViewModel
+@{
+    var modifiers = Model.Modifiers ?? Enumerable.Empty<string>();
+}
+<div class="@Model.ComponentName.ToLowerInvariant() @(string.Join(" ", modifiers))">
+    Menu
+</div>

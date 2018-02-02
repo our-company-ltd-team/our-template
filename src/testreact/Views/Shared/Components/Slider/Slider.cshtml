@@ -1,0 +1,9 @@
+@model ourservers.io.Views.Blocks.Slider.SliderViewModel
+@{
+
+	var modifiers = Model.Modifiers?.Where(m => m.StartsWith("slider")) ?? Enumerable.Empty<string>();
+}
+<div class="slider @(string.Join(" ", modifiers))">
+	Mudar aqui is good hello worl;d
+	@Model.Title
+</div>

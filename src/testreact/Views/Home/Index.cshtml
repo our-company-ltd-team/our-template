@@ -1,0 +1,7 @@
+@model ourservers.io.Controllers.HomeController.HomeViewModel
+
+@await Component.InvokeAsync(Model.Hero.ComponentName, Model.Hero)
+@foreach (var viewModel in Model.Components)
+{
+	@await Component.InvokeAsync(viewModel.ComponentName, viewModel);
+}

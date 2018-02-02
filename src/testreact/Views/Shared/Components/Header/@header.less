@@ -1,0 +1,102 @@
+/* Component header */
+
+
+.header-base() {
+    .header {
+        &__logo {
+            line-height: 0;
+
+            svg {
+                width: 180px;
+                height: 17.22px;
+            }
+        }
+
+        &__user {
+            font-family: 'Open Sans', serif;
+        }
+    }
+}
+
+
+.header-mobile() {
+    .header {
+        &__logo {
+
+            svg {
+                width: 150px;
+                height: 14.34px;
+            }
+        }
+    }
+}
+
+
+.header-after-mobile() {
+}
+
+
+.header-tablet() {
+    .header {
+        &__logo {
+            transform: translateX(-35px);
+
+            svg {
+                width: 150px;
+                height: 14.34px;
+            }
+        }
+    }
+}
+
+
+.header-tabletPortrait() {
+}
+
+
+.header-tabletLandscape() {
+}
+
+
+.header-after-tablet() {
+}
+
+
+.header-laptop() {
+    .header {
+        &__logo {
+            transform: translateX(-43px);
+
+            svg {
+                width: 180px;
+                height: 17.22px;
+            }
+        }
+
+        &__user {
+            transform: translateX(33px);
+        }
+    }
+}
+
+
+.header-between-laptop-desktop() {
+}
+
+
+.header-desktop() {
+    .header {
+        &__logo {
+            transform: translateX(-43px);
+
+            svg {
+                width: 180px;
+                height: 17.22px;
+            }
+        }
+
+        &__user {
+            transform: translateX(33px);
+        }
+    }
+}

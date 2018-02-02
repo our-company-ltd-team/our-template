@@ -1,0 +1,19 @@
+@model ourservers.io.Controllers.PageController.PageControllerViewModel
+
+@Html.React("Components.Hello", new
+{
+    compiler = "compiler"
+})
+
+@section Scripts
+{
+  <script src="@Url.Content("/build/hello.bundle.js")"></script>
+}
+
+<!-- 
+@await Component.InvokeAsync(Model.Header.ComponentName, Model.Header.WithModifiers("container__header"))
+<div class="container__scroll">
+    <div class="page__content">
+        @await Component.InvokeAsync(Model.Menu.ComponentName, Model.Menu.WithModifiers("page__menu"))
+    </div>
+</div> -->
