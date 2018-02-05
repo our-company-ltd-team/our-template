@@ -131,7 +131,7 @@ namespace ourservers.io
 				// scripts. Example:
 				config
 					.SetLoadBabel(false)
-					.AddScriptWithoutTransform("~/build/server.bundle.js");
+					.AddScriptWithoutTransform("~/../scripts/dist/server.bundle.js");
 			});
 			app.UseStaticFiles(new StaticFileOptions()
             {

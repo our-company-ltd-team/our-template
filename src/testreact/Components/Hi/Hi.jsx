@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+require("./Hi.less");
 var Hi = (function (_super) {
     __extends(Hi, _super);
     function Hi(props) {
@@ -31,10 +32,11 @@ var Hi = (function (_super) {
         });
     };
     Hi.prototype.render = function () {
-        return (<div>
-				hello {this.state.date.toLocaleTimeString()}
-			</div>);
+        return (<span className="hi">
+					hello {this.state.date.toLocaleTimeString()}
+				</span>);
     };
     return Hi;
 }(React.Component));
 exports.Hi = Hi;
+//# sourceMappingURL=Hi.jsx.map

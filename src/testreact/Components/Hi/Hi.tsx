@@ -3,6 +3,8 @@ import * as React from "react";
 interface HiProps { compiler?: string; framework?: string; }
 interface HiState { date?: Date }
 
+import "./Hi.less";
+
 export class Hi extends React.Component<HiProps,HiState> {
 	constructor(props:HiProps) {
 		super(props);
@@ -26,9 +28,9 @@ export class Hi extends React.Component<HiProps,HiState> {
 	}
     render(){
         return (
-			<div>
-				hello {this.state.date.toLocaleTimeString()}
-			</div>
+				<span className="hi">
+					hello {this.state.date.toLocaleTimeString()}
+				</span>
 		);
     } 
 }

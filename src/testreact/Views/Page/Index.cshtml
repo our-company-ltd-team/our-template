@@ -1,13 +1,20 @@
 @model ourservers.io.Controllers.PageController.PageControllerViewModel
-
+@{
+    var path = hostingEnvironment.EnvironmentName.ToLowerInvariant();
+}
 @Html.React("Components.Hello", new
 {
-    compiler = "compiler"
+    compiler = "compiler",
+    framework = "romain"
 })
 
 @section Scripts
 {
-  <script src="@Url.Content("/build/hello.bundle.js")"></script>
+    <div data-require="@Url.Content($"/build/{path}/hello.bundle.js")"></div>  
+}
+@section Styles
+{
+    <link rel="stylesheet" href="@Url.Content($"/build/{path}/hello.bundle.css")"></link>   
 }
 
 <!-- 
